@@ -27,7 +27,6 @@ int form_array(int size[], wchar_t** name[], wchar_t** path[]);
 
 int main()
 {
-	printf("2 \n");
 	int i = 0, N = 0, number, flag = 1;
 	int* size = (int*)malloc(MAX_PATH * sizeof(int));
 	wchar_t** name = (wchar_t**)malloc(MAX_PATH * sizeof(wchar_t*));
@@ -95,7 +94,7 @@ int form_array(int size[], wchar_t** name[], wchar_t** path[])
 	
 	char* a = (char*)malloc(MAX_PATH);
 	int i = 0, N = 0;;
-	printf("Enter the path to the directory (Example: D:\\photo\\1\)  \n");
+	printf("Enter the path to the directory   \n");
 	scanf("%s", a);
 	strcat(a, "\\*.*");
 	mbstowcs(path, a, strlen(a) + 1);
@@ -244,3 +243,4 @@ void merge_sort_lr(int a[], wchar_t** name[], int l, int r)
 	merge_sort_lr(a, name, mid + 1, r);
 	merge(a, name, l, mid+1, r);
 }
+
